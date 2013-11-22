@@ -1,0 +1,8 @@
+.itemResult { position: relative; overflow: auto; margin-top: 5px; margin-bottom: 5px;}
+.searchRestInput { }
+.searchRestButton { }
+.searchMapStyle { display: block; width: 100%px; min-height: 350px;}
+
+#mapContainer { overflow: auto; }
+
+#restaurantDetailsPromotionContent { width: 95%; height: 100px; margin-top: 10px; margin-bottom: 10px; border: 1px white solid; padding: 20px 10px 10px 20px;}

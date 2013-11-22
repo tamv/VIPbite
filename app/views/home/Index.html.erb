@@ -1,0 +1,67 @@
+<div class="mainContent">
+	<div id="howItWork" class="grid-row">
+		<div class="transperantBoxContent">
+			<h1 class="mgTop-10px mgLeft-10px mgBottom-10px">HOW IT WORKS</h1>
+			<ul class="mgLeft-20px mgRight-10px">
+				<li class="howItWork">1.) Eat at one of many VIPbite partner restaurant.</li>
+				<li class="howItWork">2.) Save big by being VIPbite member.</li>
+				<li class="howItWork">3.) Have some dessert, you've earn it.</li>
+			</table>
+
+			<div id="becomeVIPbiteMemberButton" class="clickable">
+				<p>
+					BECOME A MEMBER NOW 
+					<img src="/Image/Shared/clickon.png" width="20px" height="20px" align="top" style="margin-left: 3px;"/>
+				</p>
+			</div>
+		</div>
+	</div>
+
+	<div class="grid-row paddingTop-20px">
+		<div class="size-5 grid-columns mgBottom-20px">
+			<h2 class="boldFont">GET THE APP</h2>
+			<article class="mgTop-10px mgLeft-10px">
+				Find VIPbite restaurants, track your savings and flash the VIPbite pass when dining.
+				The VIPbite App is your passport to outstanding dining experiences.
+			</article>
+			<div class="mgTop-10px" style="text-align: center">
+				<img src="/Image/Shared/appstore.png" width="80px" height="20px"/>
+				<img src="/Image/Shared/googleplay.png" width="80px" height="20px"/>
+			</div>
+			<div class="mgTop-10px" style="text-align: center">
+				<img src="/Image/Shared/getapplogo.png" width="95%" height="200px"/>
+			</div>
+		</div>
+		<div class="size-6 grid-columns push-1">
+			<h2 class="boldFont">PLACES TO SAVE</h2>
+			<p class="mgLeft-10px">... and counting. Try somewhere new tonight.</p>
+			<hr class="mgTop-5px mgBottom-5px"/>
+			<ul class="mgLeft-10px alignCenter">
+				<% Restaurants.limit(5).each do |rest| %>
+					<div class="itemResult" itemscope itemtype="http://schema.org/Restaurant">
+						<div itemprop="logo" class="fLeft size-4">
+							<%= link_to image_tag('/Image/restaurant_logo/' << rest.imageUrl, style:"width:100%; height:60px;"), {controller: 'restaurant', action: 'restaurantDetail', restaurant: rest.restaurantname}, :target => "_blank" %>
+						</div>
+						<div class="fLeft size-7 mgLeft-10px" onclick="showRestaurantLocation('<%=rest.restaurantname%>')">
+							<h3 class="boldFont" itemprop="name"><%= rest.restaurantname %></h3>
+							<p itemprop="event" class="boldFont" style="font-size: 9px;"><%= getrestaurantSummary(rest.detailId) %></p>
+						</div>
+					</div>
+					<hr/>
+				<% end %>
+			</ul>
+		</div>
+		<div class="size-4 grid-columns push-3">
+			<h2 class="boldFont"><label>FOLLOW US</label>
+			<img src="/Image/Shared/whiteTwitter.png" width="30px;" heihgt="30px;" style="vertical-align: top"/>
+			<a class="twitter-timeline" width="310px" height ="320px" data-dnt="true" href="https://twitter.com/VIPbite"  data-widget-id="379467725816344576">Tweets by @VIPbite</a>
+		</h2>
+		</div>  
+	</div>
+</div>
+
+<script>
+  !function(d,s,id)
+    {var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}
+    (document,"script","twitter-wjs");
+</script>

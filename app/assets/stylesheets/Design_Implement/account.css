@@ -1,0 +1,12 @@
+#registrationForm { padding: 0px 10px 0px 10px; clear: both;}
+#registartionGetAppContent { padding: 0px 10px 0px 10px; clear: both;}
+#userAccount { position: relative; overflow: auto;}
+#recoveryContent { position: relative; overflow: auto;}
+
+.registrationInput { margin-left: 20px;}
+
+.accountChangeInput { }
+
+.renewButton { }
+.recoverButton { }
+.registerButton { }

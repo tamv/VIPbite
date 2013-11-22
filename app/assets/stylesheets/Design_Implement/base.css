@@ -1,0 +1,89 @@
+
+/* RESET */
+/* ----------------------------------------- */
+
+/* Global reset */
+/* Based upon 'reset.css' in the Yahoo! User Interface Library: http://developer.yahoo.com/yui */
+*, html, body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, label, fieldset, input, p, blockquote, th, td { margin:0; padding:0; }
+table { border-collapse:collapse; border-spacing:0 ;}
+fieldset, img { border:0; }
+address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal; }
+ol, ul, li { list-style:none; }
+caption, th { text-align:left; }
+h1, h2, h3, h4, h5, h6 {font-weight:normal; clear: both; }
+q:before, q:after { content:''}
+strong { font-weight:bold; }
+em { font-style:italic; }
+a img { border:none; } /* Gets rid of IE's blue borders */
+blockquote { text-indent: 0}
+
+/* GLOBAL CSS SETTING */
+html { position: relative; font-size: 60%;}
+body { position: relative; background-color: white; color: black; margin: 0 auto; }
+img { vertical-align: middle; }
+.fLeft { float: left; }
+.fRight { float: right; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+
+/* TYPOGRAPHY */
+h1,h2,h3,h4,h5,h6, .hFont {text-rendering: optimizeLegibility; font-weight: normal; }
+
+h1 { font-size: 3em; line-height: 1; margin-bottom: 0.2em; }
+h2 { font-size: 2em; margin-bottom: 0.75em; }
+h3 { font-size: 1.5em; line-height: 1; margin-bottom: 0.5em; }
+h4 { font-size: 1.2em; line-height: 1.25; margin-bottom: 1em; }
+h5 { font-size: 1em; font-weight: bold; margin-bottom: 1em; }
+h6 { font-size: 1em; font-weight: bold; }
+
+b, .boldFont { font-weight: 900}
+
+.f18 { font-size: 18px; }
+.f14 { font-size: 14px; }
+.f12 { font-size: 12px; }
+.f10 { font-size: 10px; }
+
+/* TABLE */
+table         { margin-bottom: 1.4em; width:100%; }
+th            { font-weight: bold; }
+thead th      {}
+th,td,caption { padding: 4px 10px 4px 5px; }
+tbody tr:nth-child(even) td,
+tbody tr.even td  {}
+tfoot       { font-style: italic; }
+caption     { background: #eee; }
+
+/* Margin */
+.autoMargin { margin: 0 auto; }
+
+.mgTop-5px { margin-top: 5px; }
+.mgTop-10px { margin-top: 10px; }
+.mgTop-20px { margin-top: 20px; }
+
+.mgBottom-5px { margin-bottom: 5px; }
+.mgBottom-10px { margin-bottom: 10px; }
+.mgBottom-20px { margin-bottom: 20px; }
+
+.mgLeft-5px { margin-left: 5px; }
+.mgLeft-10px { margin-left: 10px; }
+.mgLeft-20px { margin-left: 20px; }
+
+.mgRight-5px { margin-right: 5px; }
+.mgRight-10px { margin-right: 10px; }
+.mgRight-20px { margin-right: 20px; }
+
+/* PADDING */
+.paddingTop-20px { padding-top: 20px; }
+.paddingBottom-20px { padding-bottom: 20px; }
+.paddingLR-10px { padding: 0 10px; }
+
+/* ETC */
+.clickable { cursor: pointer;}
+.inlineText { display: inline; }
+.inlineBlock {display: inline-block; }
+.block { display: block;}
+.alignCenter { text-align: center; vertical-align: middle; }
+.clearBoth { clear: both; }
+.autoOverFlow { overflow: auto; }
+.highlight {background-color: yellow; border: 2px solid black;}

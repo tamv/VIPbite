@@ -1,0 +1,54 @@
+@font-face { font-family: "HeadingFont"; src: url("/Font/JuliusSansOne.ttf") format("truetype"); } /* please change this font base on your need */
+@font-face { font-family: "vipBiteFont"; src: url("/Font/Sintony-Regular.ttf") format("truetype"); } /* please change this font base on your need */
+
+html { }
+	body { font-family: "vipBiteFont"; }
+	h1,h2,h3,h4,h5,h6, .hFont { font-family: "HeadingFont"; }
+
+	#staticHeader	{ background-color: #DADBD9; min-height: 20px; clear: both;}
+
+	#staticFooter	{ background-color: #DADBD9; min-height: 40px; text-align: left;}
+
+	#loginContainer { position: relative; text-align: right;}
+	#loginContainer .loginLabel	{ font-size: 10px; font-weight:bold; color: black; line-height: 20px; }
+	#loginContainer .loginInput { border: solid 1px black; }
+	#loginContainer .loginLink 	{ margin: 2px 3px 0px 3px; font-weight: 900; color: black; text-decoration: none; }
+	#loginContainer .loginLink:hover { background-color: black; color: white; font-weight: 900; padding: 5px 5px 5px 5px; }
+	#loginContainer .loginButton { background-color: white; font-size: 10px; border: solid 1px black; text-align: left; padding: 2px 2px 2px 2px; }
+
+	#menuHeader	{ position: relative; display: block; clear: both; min-height: 100px;}
+	#menuHeader img { vertical-align: bottom; }
+	.menuItem 			{ margin-left: 20px; margin-right: 20px; line-height: 16px; }
+	.menuItem a			{ text-decoration: none; color: black; }
+	.menuItem a:hover	{ background-color: black; color: white; font-weight: 900; padding: 5px 5px 5px 5px; }
+
+	.mainContent		{ width: 1000px; max-width: 100%; margin: 0 auto; position: relative;}
+	.boxShadow			{ box-shadow: 0 0 20px rgba(74, 74, 72, 0.7) }
+
+@media only screen and (max-width: 480px){
+	nav ul { margin: 0; padding: 0; }
+	nav ul li {display: block; padding: 4px 0; width: 100% !important;}
+	nav ul a { text-decoration: none; margin: 3px; padding: 3px 3px; text-decoration: none; color: black; }
+}
+
+@media only screen and (min-width: 480px) {
+	nav ul { margin: 0; padding: 0; }
+    nav ul li:first-child { margin-left: 0; } nav ul li:last-child { margin-right: 0; }
+    nav ul li { display: inline-block; padding: 4px 0; width: 100%}
+    nav ul a { text-decoration: none; margin: 3px; padding: 3px 3px; text-decoration: none; color: black; }
+    .oldie nav a { margin: 0 0.7%;}
+
+    #staticFooter li {min-height: 40px !important; vertical-align: top; margin: 10px 0 !important; }
+    #staticFooter .sitemap { margin: 10px 0 !important; padding: 0; min-height: 0 !important;}
+    #staticHeader nav {float: right;}
+}
+
+.ir { background-color: transparent; border: 0; overflow: hidden; *text-indent: -9999px; }
+.ir:before { content: ""; display: block; width: 0; height: 150%; }
+.hidden { display: none !important; visibility: hidden; }
+.visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
+.invisible { visibility: hidden; }
+.clearfix:before, .clearfix:after { content: " "; display: table; }
+.clearfix:after { clear: both; }
+.clearfix { *zoom: 1; }

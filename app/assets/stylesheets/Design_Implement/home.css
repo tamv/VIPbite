@@ -1,0 +1,23 @@
+#howItWork { background-image: url('/Image/Shared/background.jpg'); background-size: contain; min-height: 250px; position: relative;}
+
+.howItWork { font-size: 11px; font-weight: 900; margin-bottom: 10px;}
+
+.transperantBoxContent { background-color: rgba(255, 255, 255, 0.7); min-height: 180px; max-width: 330px; position: absolute; bottom: 20px; left:0px;}
+
+#becomeVIPbiteMemberButton {
+	color: white;
+	background-color: #232423;
+	border: solid 1px black;
+	text-align:center;
+	padding:5px;
+	height: 20px;
+	width: 220px;
+	position: absolute;
+	right: 0px;
+	bottom: 10px;
+	font-size:12px;
+	font-weight:bolder;
+	line-height: 20px;
+}
+
+.contactUsEmailContent {  margin-top: 20px; width: 95%; min-height: 200px; border: solid 1px black; }

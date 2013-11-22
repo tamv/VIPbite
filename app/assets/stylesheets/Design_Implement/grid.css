@@ -1,0 +1,51 @@
+.size-1 { width: 8.333%; }
+.size-2 { width: 16.667%; }
+.size-3 { width: 25%; }
+.size-4 { width: 33.333%; }
+.size-5 { width: 41.667%; }
+.size-6 { width: 50%; }
+.size-7 { width: 58.333%%; }
+.size-8 { width: 66.667%; }
+.size-9 { width: 75%; }
+.size-10 { width: 83.333%; }
+.size-11 { width: 91.667%; }
+.size-12 { width: 100%; }
+
+.push-1 { position: relative; left: 5%; right: auto; }
+.pull-1 { position: relative; right: 5%; left: auto; }
+.push-2 { position: relative; left: 10%; right: auto; }
+.pull-2 { position: relative; right: 10%; left: auto; }
+.push-3 { position: relative; left: 15%; right: auto; }
+.pull-3 { position: relative; right: 15%; left: auto; }
+.push-4 { position: relative; left: 20%; right: auto; }
+.pull-4 { position: relative; right: 20%; left: auto; }
+.push-5 { position: relative; left: 25%; right: auto; }
+.pull-5 { position: relative; right: 25%; left: auto; }
+.push-6 { position: relative; left: 30%; right: auto; }
+.pull-6 { position: relative; right: 30%; left: auto; }
+.push-7 { position: relative; left: 35%; right: auto; }
+.pull-7 { position: relative; right: 35%; left: auto; }
+.push-8 { position: relative; left: 40%; right: auto; }
+.pull-8 { position: relative; right: 40%; left: auto; }
+.push-9 { position: relative; left: 45%; right: auto; }
+.pull-9 { position: relative; right: 45%; left: auto; }
+.push-10 { position: relative; left: 50%; right: auto; }
+.pull-10 { position: relative; right: 50%; left: auto; }
+.push-11 {position: relative; left: 55.0%; right: auto; }
+.pull-11 { position: relative; right: 55.0%; left: auto; }
+.push-12 { position: relative; left: 60%; right: auto; }
+.pull-12 { position: relative; right: 60%; left: auto; }
+.push-13 { position: relative; left: 65%; right: auto; }
+.pull-13 { position: relative; right: 65%; left: auto; }
+.push-14 { position: relative; left: 70%; right: auto; }
+.pull-14 { position: relative; right: 70%; left: auto; }
+.push-15 { position: relative; left: 75%; right: auto; }
+.pull-15 { position: relative; right: 75%; left: auto; }
+.push-16 { position: relative; left: 80%; right: auto; }
+.pull-16 { position: relative; right: 80%; left: auto; }
+.push-17 { position: relative; left: 85%; right: auto; }
+.pull-17 { position: relative; right: 85%; left: auto; }
+.push-18 { position: relative; left: 90%; right: auto; }
+.pull-18 { position: relative; right: 90%; left: auto; }
+.push-19 { position: relative; left: 95%; right: auto; }
+.pull-19 { position: relative; right: 95%; left: auto; }

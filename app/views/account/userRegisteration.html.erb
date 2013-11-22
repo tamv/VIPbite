@@ -1,0 +1,100 @@
+<div class="mainContent">
+	<div class="grid-row">
+		<div id="registrationForm" class="size-13 grid-column mgTop-20px">
+			<%= form_tag(controller: 'account', action: 'newUserScuscription', method: "post") do %>
+				<h1>BECOME A MEMBER</h1>
+				<h4 class="mgLeft-10px">MEMBER INFORMATION</h4>	
+				<table class="mgLeft-20px">
+					<tr class="mgTop-10px mgBottom-10px">
+						<th><label>FIRST NAME:</label></th>
+						<th><label> LAST NAME:</label></th>
+						<th><label> TITLE:</label></th>
+					</tr>
+					<tr>
+						<td><%= text_field_tag('firstName', params[:firstName] || nil, maxlength: 30, size: 25, :class=>"registrationInput") %></td>
+						<td><%= text_field_tag('lastName', params[:lastName] || nil, maxlength: 30, size: 25, :class=>"registrationInput") %></td>
+						<td><%= select_tag('userTitle', options_for_select(["MR.", "MRs.", "MS."]), :class=>"registrationInput") %></td>
+					</tr>
+					<tr>
+						<th><label>EMAIL:</label></th>
+					</tr>
+					<tr>
+						<td><%= email_field_tag('email', params[:email] || nil, maxlength: 30, size: 25, :class=>"registrationInput") %></td>
+					</tr>
+					<tr>
+						<th><label>PASSWORD:</label></th>
+						<th><label>CONFIRMED PASSWORD:</label></th>
+					</tr>
+					<tr>
+						<td><%= password_field_tag('password', nil, maxlength:20, size: 25, :class=>"registrationInput") %></td>
+						<td><%= password_field_tag('cfm_password', nil, maxlength:20, size: 25, :class=>"registrationInput") %></td>
+					</tr>
+				</table>
+				<hr class="mgTop-10px mgBottom-10px"/>
+				<h4 class="mgLeft-10px">PAYMENT & BILLING INFORMATION</h4>
+				<label class="mgLeft-20px mgRight-20px" style="font-weight:bold;">MEMBERSHIP TYPE:</label>
+				<%= radio_button_tag('memberType', '6months', :class=>"registrationInput") %>
+				<label class="mgLeft-10px mgRight-20px">6 months -$69.95</label>
+				<%= radio_button_tag('memberType', '12months', :class=>"registrationInput") %>
+				<label class="mgLeft-10px mgRight-20px">12 months -$124.95</label>
+				<table class="mgLeft-20px mgTop-5px">
+					<tr>
+						<th><label>FIRSTNAME:</label></th>
+						<th><label>LASTNAME:</label></th>
+						<th><label>CARD TYPE:</label></th>
+					</tr>
+					<tr>
+						<td><%= text_field_tag('noc_firstname', params[:noc_firstname] || nil, placeholder: "Firstname", maxlength: 30, size: 25, :class=>"registrationInput") %></td>
+						<td><%= text_field_tag('noc_lastname', params[:noc_lastname] || nil, placeholder: "Lastname", maxlength: 30, size: 25, :class=>"registrationInput") %></td>
+						<td><%= select_tag('cardtype', options_for_select(["VISA", "MASTERCARD", "AMERICANEXP"]), :class=>"registrationInput") %></td>
+					</tr>
+					<tr>
+						<th><label>CARD NUMBER:</label></th>
+						<th><label>EXP:</label></th>
+						<th><label>CVV/CID NUMBER:</label></th>
+					</tr>
+					<tr>
+						<td><%= text_field_tag('cardno', nil, maxlength: 20, size: 25, :class=>"registrationInput")%></td>
+						<td>
+							<%= text_field_tag('exp_month', nil, maxlength: 2, placeholder: "MM", :class=>"registrationInput", :size=> 2)%>
+							<%= text_field_tag('exp_year', nil, maxlength: 4, placeholder: "YYYY", :class=>"registrationInput", :size=> 4)%>
+						</td>
+						<td><%= password_field_tag('cvv', nil, maxlength: 3, :class=>"registrationInput")%></td>
+					</tr>
+					<tr>
+						<th><label>BILLING ADDRESS:</label></th>
+						<th><label>CITY:</label></th>
+						<th><label>PROVINCE:</label></th>
+					</tr>
+					<tr>
+						<td><%= text_field_tag('address', params[:address] || nil, maxlength: 60, size: 25, :class=>"registrationInput") %></td>
+						<td><%= text_field_tag('city', params[:city] || nil, maxlength: 20, size: 25, :class=>"registrationInput") %></td>
+						<td><%= select_tag('prov', options_for_select(["AB", "BC"]), :class=>"registrationInput") %></td>
+					</tr>
+					<tr>
+						<th><label>POSTAL:</label></th>
+						<th><label>PHONE:</label></th>
+					</tr>
+					<tr>
+						<td><%= text_field_tag('postal', params[:postal] || nil, maxlength: 7, size: 6, :class=>"registrationInput") %></td>
+						<td><%= text_field_tag('phone', params[:phone] || nil, maxlength: 11, size: 25, :class=>"registrationInput") %></td>
+					</tr>
+				</table>
+				<hr class="mgTop-10px mgBottom-10px"/>
+				<div class="fRight"><span style="float:right"><%= submit_tag('REGISTER', :class=>"accountButton clickable") %></span></div>
+			<%end%>		
+		</div>
+	</div>
+
+	<div class="grid-row">
+		<div id="registartionGetAppContent" class="size-13 grid-column mgTop-10px mgBottom-10px">
+			<hr class="mgBottom-10px"/>
+			<h1> DON'T FORGET THE APP</h1>
+			<section class="fLeft size-4 mgTop-10px">
+					<img src="/Image/Shared/yycPass.png" width="100%" height="60%"/>
+			</section>
+			<p class="fLeft size-12 push-1 mgLeft-10px mgTop-10px f18">Think of the VIPbite as a card.( you don't need another one cluttering your wallet)
+			Flash the app at participating VIPbite restaurants and reap the rewards.</p>
+		</div>
+	</div> 
+</div>

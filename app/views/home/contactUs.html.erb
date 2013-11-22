@@ -1,0 +1,33 @@
+<div class="mainContent">
+	<div class="grid-row">
+		<div class="size-10 push-1 grid-columns mgTop-20px">
+			<h1>Contact Us</h1>
+			<table class="mgLeft-10px">
+				<tr>
+					<th><h3>SUPPORT EMAIL:</h3></th>
+					<td><h3>hello@vipbite.com</h3></td>
+				</tr>
+				<tr>
+					<th><h3>PHONE:</th>
+					<td><h3>1800-234-1234</h3></td>
+				</tr>
+			</table>
+			<hr/>
+		</div>
+	</div>
+	<div class="grid-row">
+		<div class="size-10 push-1 grid-columns mgTop-20px mgLeft-10px">
+			<%= form_tag(controller: 'home', action: 'contactUs', method: 'post') do %>
+				<% if(!checkUserCookies)%>
+					<h4 class="boldFont">please enter your email address here!"</h4>
+					<%= email_field_tag('email', params[:email] || nil, size:35, maxlength: 30, :class=>"contactUsEmailInput")%>
+				<% else %>
+					<h4 class="boldFont"><%= @current_user.login %></h4>
+				<% end %>
+				<br/>
+				<%= text_area_tag('emailContent', params[:emailContent] || nil, :class=>"contactUsEmailContent") %>
+				<%= submit_tag('SUBMIT', :class=>"contactusSubmitButton clickable", style:"float:right; margin-top:10px;") %>
+			<% end %>
+		</div>
+	</div>
+</div>

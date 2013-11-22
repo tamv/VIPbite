@@ -1,0 +1,63 @@
+<div class="mainContent">
+	<div class="grid-row">
+		<div id="searchContainer" class="size-7 grid-column mgTop-20px mgBottom-10px">
+			<section>
+				<%= form_tag(controller: 'restaurant', action: 'searchRestaurant', method: "post") do %>
+					<%= text_field_tag('SearchVal', nil || params[:SearchVal], maxlength: 30, placeholder: 'What are you in the mood for?', size: 40, style: "height: 23px;", :class=>"searchRestInput") %>
+					<%= submit_tag('search', :class=>"searchRestButton clickable", style: "padding:7px; font-size: 11px;")%>
+				<% end %>
+			</section>
+			<section class="mgTop-10px">
+				<% if(nil != @searchRestaurant) %>
+					<% @searchRestaurant.each do |rest|%>
+						<div class="itemResult" itemscope itemtype="http://schema.org/Restaurant">
+							<div itemprop="logo" class="fLeft size-4">
+								<%= link_to image_tag('/Image/restaurant_logo/' << rest.imageUrl, style:"width:100%; height:60px;"), {controller: 'restaurant', action: 'restaurantDetail', restaurant: rest.restaurantname}, :target => "_blank" %>
+							</div>
+							<div class="fLeft size-7 mgLeft-10px" onclick="showRestaurantLocation('<%=rest.restaurantname%>')">
+								<h3 class="boldFont" itemprop="name"><%= rest.restaurantname %></h3>
+								<p itemprop="telephone" class="boldFont" style="font-size: 9px;">phone: <%= rest.phone %></p>
+								<p itemprop="servesCuisine" class="boldFont" style="font-size: 9px;">tags: <%= rest.tags %></p>
+								<p itemprop="event" class="boldFont" style="font-size: 9px;"><%= getrestaurantSummary(rest.detailId) %></p>
+								<p itemprop="address" style="font-size: 9px;"><%= [rest.address, rest.city, rest.province, rest.postal].join(", ")%></p>
+								<input class="hid_location" id="<%=rest.restaurantname%>" type="hidden" value='{"name": "<%=rest.restaurantname%>", "latitude": <%=rest.latitude%>, "longitude": <%=rest.longitude%>}'/>
+							</div>
+						</div>
+						<hr/>
+					<% end %>
+				<% end %>
+			</section>
+		</div>
+
+		<div id="mapConatiner" class="size-11 grid-column mgTop-20px mgBottom-10px">
+			<span id="googleMap" class="searchMapStyle">TEST</span>
+			<hr/>
+			<section id="Feature" class="fLeft size-10">
+				<section class="fLeft size-7 mgTop-20px">
+					<img src="/Image/Shared/feature.jpg" height="100px" width="95%"/>
+				</section>
+				<article class="fLeft size-12 mgTop-20px">
+					<h4 class="boldFont">FEATURE</h4>
+					<p>featuring new restaruant just added to the VIPbite list? VIPbite TESTED AND AND APPROVED with a blog entry of your experience.</p>
+				</article>
+			</section>
+			<section id="GetApp" class="fLeft size-10">
+				<section class="fLeft size-7 mgTop-20px">
+					<img src="/Image/Shared/yycPass.png" width="100%" height="60%"/>
+					<img src="/Image/Shared/appstore.png" width="45%" height="30%"/>
+					<img src="/Image/Shared/googleplay.png" width="45%" height="30%"/>
+				</section>
+				<article class="fLeft size-12 mgTop-20px">
+					<h4 class="boldFont mgLeft-5px">GET THE APP</h4>
+					<p class="mgLeft-10px">Find vipbite partner restaurant, flash the vipbite card when dining. The vipbite app is your passport to outstanding dining experience.</p>
+				</artivle>
+			</section>
+		</div>
+	</div>
+</div>
+
+<script>
+	$(window).bind("ready", function() {
+		initialize_withLoc();
+	});
+</script>
