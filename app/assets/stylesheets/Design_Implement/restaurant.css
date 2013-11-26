@@ -1,8 +1,20 @@
-.itemResult { position: relative; overflow: auto; margin-top: 5px; margin-bottom: 5px;}
-.searchRestInput { }
-.searchRestButton { }
-.searchMapStyle { display: block; width: 100%px; min-height: 350px;}
+#mapContainer 						{ overflow: auto; }
+#RestaurantTweetButton				{ text-decoration: none; color: black; }
+.itemResult 						{ position: relative; overflow: auto; margin-top: 5px; margin-bottom: 5px;}
+.searchRestInput 					{ }
+.searchRestButton 					{ }
+.searchMapStyle 					{ display: block; width: 100%px; min-height: 350px;}
 
-#mapContainer { overflow: auto; }
+#restaurantDetail th				{ padding: 5px 3px; min-width: 70px; }
+#restaurantDetail td				{ padding: 5px 3px;}
 
-#restaurantDetailsPromotionContent { width: 95%; height: 100px; margin-top: 10px; margin-bottom: 10px; border: 1px white solid; padding: 20px 10px 10px 20px;}
+
+@media only screen and (max-width: 480px) {
+	#googleMap 							{ display: none; }
+	#restaurantDetailsPromotionContent 	{ width: 95%; height: 100px; margin-top: 10px; margin-bottom: 10px; border: 1px white solid;}
+}
+
+@media only screen and (min-width: 480px) {
+	#googleMap 							{ display: block; }
+	#restaurantDetailsPromotionContent 	{ width: 95%; height: 100px; margin-top: 10px; margin-bottom: 10px; border: 1px white solid; padding: 10px 10px;}
+}

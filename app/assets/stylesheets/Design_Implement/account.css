@@ -1,12 +1,19 @@
-#registrationForm { padding: 0px 10px 0px 10px; clear: both;}
-#registartionGetAppContent { padding: 0px 10px 0px 10px; clear: both;}
-#userAccount { position: relative; overflow: auto;}
-#recoveryContent { position: relative; overflow: auto;}
+#registrationGetAppContent { clear: both;}
+#userAccount { }
+#recoveryContent { }
 
-.registrationInput { margin-left: 20px;}
-
+.registrationInput { }
 .accountChangeInput { }
-
 .renewButton { }
 .recoverButton { }
 .registerButton { }
+
+@media only screen and (max-width: 480px) {
+	#registrationForm { display: none; text-align: left !important;}
+	#registrationGetAppContent { font-size: 14px !important; }
+}
+
+@media only screen and (min-width: 480px) {
+	#registrationForm { clear: both; }
+	#registrationGetAppContent { font-size: 18px !important; }
+}

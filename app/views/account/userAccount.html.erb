@@ -1,53 +1,54 @@
-<div class="mainContent">
-	<div class="grid-row">
-		<div id="userAccount" class="size-10 grid-column mgTop-20px">
-			<h1>MY ACCOUNT</h1>
-			<h2 class="mgLeft-10px">Edit Email or Password</h2>
-			<%= form_tag(controller: 'account', action: 'userAccount', method:'post') do %>
-				<table class="mgLeft-20px">
-					<tr>
-						<th><label>EMAIL:</label></th>
-						<td><%= email_field_tag('email', @loginUserEmail || nil, maxlength: 30,:size => 30, :class => "accountChangeInput") %></td>
-					</tr>
-					<tr>
-						<th><label>PASSWORD:</label></th>
-						<td><%= password_field_tag('password', nil, maxlength:20,:size => 30, :class => "accountChangeInput") %></td>
-					</tr>
-				</table>
+<div class="mainContent clearfix">
+	<div class="greyContent boxShadow paddingLR-10px">
+		<article class="clearfix">
+				<section id="userAccount" class="size-10 grid-column mgTop-20px">
+				<h1>MY ACCOUNT</h1>
+				<h2 class="mgLeft-10px">Edit Email or Password</h2>
+				<%= form_tag(controller: 'account', action: 'userAccount', method:'post') do %>
+					<table class="mgLeft-20px">
+						<tr>
+							<th><label>EMAIL:</label></th>
+							<td><%= email_field_tag('email', @loginUserEmail || nil, maxlength: 30,:size => 30, :class => "accountChangeInput") %></td>
+						</tr>
+						<tr>
+							<th><label>PASSWORD:</label></th>
+							<td><%= password_field_tag('password', nil, maxlength:20,:size => 30, :class => "accountChangeInput") %></td>
+						</tr>
+					</table>
+					<hr/>
+					<div id="MembershipValidationDate" class="mgBottom-10px">
+						<article class="mgLeft-20px mgTop-20px mgBottom-10px">
+							<h4 style="display: inline;">VIPbite MEMBERSHIP VALID UNTIL: </h4>
+							<% if(@loginUserExp <= Time.now) %>
+								<h4 class="boldFont mgLeft-10px" style="color:red; display: inline;"><%= @loginUserExp.year %>/<%= @loginUserExp.month %>/<%= @loginUserExp.day %></h4>
+							<% else %>
+							<h4 class="boldFont mgLeft-10px" style="color:green; display: inline;"><%= @loginUserExp.year %>/<%= @loginUserExp.month %>/<%= @loginUserExp.day %></h4>
+						<% end %>
+						</article>
+					</div>
+					<div class="mgBottom-10px" style="overflow: auto">
+						<span class="fRight"><%= submit_tag('APPLY CHANGE', :class=>"accountButton clickable") %></span>
+					</div>
+				<%end%>
 				<hr/>
-				<div id="MembershipValidationDate" class="mgBottom-10px">
-					<article class="mgLeft-20px mgTop-20px mgBottom-10px">
-						<h4 style="display: inline;">VIPbite MEMBERSHIP VALID UNTIL: </h4>
-						<% if(@loginUserExp <= Time.now) %>
-							<h4 class="boldFont mgLeft-10px" style="color:red; display: inline;"><%= @loginUserExp.year %>/<%= @loginUserExp.month %>/<%= @loginUserExp.day %></h4>
-						<% else %>
-						<h4 class="boldFont mgLeft-10px" style="color:green; display: inline;"><%= @loginUserExp.year %>/<%= @loginUserExp.month %>/<%= @loginUserExp.day %></h4>
-					<% end %>
-					</article>
-				</div>
-				<div class="mgBottom-10px" style="overflow: auto">
-					<span class="fRight"><%= submit_tag('APPLY CHANGE', :class=>"accountButton clickable") %></span>
-				</div>
-			<%end%>
-			<hr/>
-		</div>
-		<div class="size-6 grid-columns push-1 mgTop-20px">
-			<%if(@loginUserExp >= Time.now) %>
-				<img src="/Image/Shared/validMember.png" width="200px;" height="200px"/>
-			<% else %>
-				<img src="/Image/Shared/expiredMember.png" width="200px;" height="200px"/>
-			<%end%>
-		</div>
-	</div>
-
-	<div class="grid-row">
-		<div id="registartionGetAppContent" class="size-13 grid-column mgTop-10px mgBottom-10px">
-			<h1> DON'T FORGET THE APP</h1>
-			<section class="fLeft size-4 mgTop-10px">
-					<img src="/Image/Shared/yycPass.png" width="100%" height="60%"/>
 			</section>
-			<p class="fLeft size-12 push-1 mgLeft-10px mgTop-10px f18">Think of the VIPbite as a card.( you don't need another one cluttering your wallet)
-			Flash the app at participating VIPbite restaurants and reap the rewards.</p>
-		</div>
-	</div> 
+			<section class="size-6 mgTop-20px">
+				<%if(@loginUserExp >= Time.now) %>
+				<img src="/Image/Shared/validMember.png" width="200px;" height="200px"/>
+				<% else %>
+					<img src="/Image/Shared/expiredMember.png" width="200px;" height="200px"/>
+				<%end%>
+			</section>
+		</article>
+		<artivle class="clearfix">
+			<section id="registartionGetAppContent" class="size-13 mgTop-10px mgBottom-10px">
+				<h1> DON'T FORGET THE APP</h1>
+				<section class="fLeft size-4 mgTop-10px">
+						<img src="/Image/Shared/yycPass.png" width="100%" height="60%"/>
+				</section>
+				<p class="fLeft size-12 mgLeft-10px mgTop-10px f14">Think of the VIPbite as a card.( you don't need another one cluttering your wallet)
+				Flash the app at participating VIPbite restaurants and reap the rewards.</p>
+			</section>
+		</article>
+	</div>
 </div>

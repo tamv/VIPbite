@@ -1,8 +1,6 @@
 #howItWork { background-image: url('/Image/Shared/background.jpg'); background-size: contain; min-height: 250px; position: relative;}
-
 .howItWork { font-size: 11px; font-weight: 900; margin-bottom: 10px;}
-
-.transperantBoxContent { background-color: rgba(255, 255, 255, 0.7); min-height: 180px; max-width: 330px; position: absolute; bottom: 20px; left:0px;}
+.transperantBoxContent { background-color: rgba(255, 255, 255, 0.7); min-height: 160px; min-width: 300px; position: absolute; bottom: 20px; left:0px;}
 
 #becomeVIPbiteMemberButton {
 	color: white;

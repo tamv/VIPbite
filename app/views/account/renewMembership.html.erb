@@ -1,6 +1,6 @@
-<div class="mainContent">
-	<div class="grid-row">
-		<div id="registrationForm" class="size-13 grid-column mgTop-20px">
+<div class="mainContent clearfix">
+	<article id="registrationForm" class="clearfix">
+		<section class="size-13 mgTop-20px">
 			<%= form_tag(controller: 'account', action: 'renewExistingSubscription', method: "post") do %>
 				<h1>Renew Membership</h1>
 				<h4 class="mgLeft-10px">MEMBER INFORMATION</h4>	
@@ -73,17 +73,16 @@
 				<hr class="mgTop-10px mgBottom-10px"/>
 				<div class="last"><span style="float:right"><%= submit_tag('RE-NEW SUBSCRIPTION', :class=>"renewButton clickable") %></span></div>
 			<%end%>
-		</div>
-	</div>
-
-	<div class="grid-row">
-		<div id="registartionGetAppContent" class="size-13 grid-column mgTop-10px mgBottom-10px">
+		</section>
+	</article>
+	<article id="registerationGetAppContent" class="clearfix">
+		<section class="size-13 mgTop-10px mgBottom-10px">
 			<h1> DON'T FORGET THE APP</h1>
-			<section class="fLeft size-4 mgTop-10px">
+			<span class="fLeft size-4 mgTop-10px">
 					<img src="/Image/Shared/yycPass.png" width="100%" height="60%"/>
-			</section>
-			<p class="fLeft size-12 push-1 mgLeft-10px mgTop-10px f18">Think of the VIPbite as a card.( you don't need another one cluttering your wallet)
+			</span>
+			<p class="fLeft size-12 mgTop-10px">Think of the VIPbite as a card.( you don't need another one cluttering your wallet)
 			Flash the app at participating VIPbite restaurants and reap the rewards.</p>
-		</div>
-	</div> 
+		</section>
+	</article>
 </div>

@@ -2,7 +2,7 @@ function initialize_withLoc()
 {
 	var featureOpts = [{
 		stylers: [
-        { visibility: 'simplified' }, { saturation: -100 }, { gamma: 0.28 }, { weight: 0.5 } ] },
+        { visibility: 'simplified' }, ] },
         { elementType: 'labels', stylers: [ { visibility: 'off' } ] }
     ];
 

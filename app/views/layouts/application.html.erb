@@ -5,7 +5,10 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="user-scalable=no, width=device-width" />
+	<meta name="HandheldFriendly" content="true" />
+	<meta name="apple-mobile-web-app-capable" content="yes">
+
 	<!-- Section used for protection-->
 	<%= csrf_meta_tags %>
 
@@ -36,19 +39,24 @@
 					<%else%>
 						<li class="block">
 							<%= form_tag( controller: 'session', action: 'LogIn', method: 'post') do %>
-								<label class="loginLabel inlineBlock">EMAIL: 
-								<%= email_field_tag('email', nil, maxlength: 30,:class=>"loginInput inlineBlock") %>
-								</label>
-								<label class="loginLabel inlineBlock">PASS: 
-								<%= password_field_tag('password', nil, maxlength:20, :class=>"loginInput inlineBlock") %>
-								</label>
-								<%= submit_tag('LOGIN', :class=>"loginButton inlineBlock clickable")%>
+								<table>
+									<tr>
+										<th><label class="loginLabel inlineBlock">Email </th>
+										<th><label class="loginLabel inlineBlock">Password </th>
+									</tr>
+									<tr>
+										<td><%= email_field_tag('email', nil, maxlength: 30,:class=>"loginInput inlineBlock text-left") %></td>
+										<td><%= password_field_tag('password', nil, maxlength:20, :class=>"loginInput inlineBlock text-left") %></td>
+										<td><%= submit_tag('Login', :class=>"loginButton inlineBlock clickable")%></td>
+									</tr>
+									<tr>
+										<td><p class="loginLink">checkbox+Keep me logged in</p></td>
+										<td><a href="/account/PasswordRecovery" class="loginLink">Forgot Your Password?</a></td>
+									</tr>
+								</table>
 							<%end%>
 						</li>
 						<li class="block">
-							<a href="/account/PasswordRecovery" class="loginLink">FORGOT YOUR PASSWORD?</a>
-							<text class="loginLink"> | </text>
-							<a href="/account/Registration" class="loginLink">REGISTER NOW</a>
 						</li>
 					<%end%>
 				</ul></nav>
@@ -58,17 +66,19 @@
 			<div class="mainContent clearfix">
 				<nav><ul compact>
 					<li>
-						<section class="inlineBlock size-5">
+						<section class="inlineBlock size-7 text-left">
 							<a href="/"><img src="/Image/Shared/vipBiteLogo.png" width="100%" height="100px"></a>
 						</section>
 
-						<section class="inlineBlock size-6 text-right">
-							<span class="menuItem inlineBlock"><a href="/restaurant/search" class="f10">FIND A RESTAURANT</a></span>
-							<span class="menuItem inlineBlock"><a href="/restaurant" class="f10">HOW IT WORKS</a></span>
+						<section class="inlineBlock size-12 text-right mgLeft-20px">
+							<span class="menuItem inlineBlock"><a href="/restaurant/search" class="f12">FIND A RESTAURANT</a></span>
+							<span class="menuItem inlineBlock"><p class="f12">|</p></span>
+							<span class="menuItem inlineBlock"><a href="/restaurant" class="f12">HOW IT WORKS</a></span>
+							<span class="menuItem inlineBlock"><p class="f12">|</p></span>
 							<% if(checkUserCookies) %>
-								<span class="menuItem inlineBlock"><a href="/account/renew" class="f10">RE-NEW MEMBERSHIP</a></span>
+								<span class="menuItem inlineBlock"><a href="/account/renew" class="f12">RE-NEW MEMBERSHIP</a></span>
 							<%else%>
-								<span class="menuItem inlineBlock"><a href="/account/Registration" class="f10">BECOME A MEMBER</a></span>
+								<span class="menuItem inlineBlock"><a href="/account/Registration" class="f12">BECOME A MEMBER</a></span>
 							<%end%>
 						</section>
 					</li>
@@ -81,41 +91,42 @@
 		<%= yield %>
 	</content>
 
-	<footer>
+	<footer class="mgTop-5px">
 		<div id="staticFooter">
-			<div class="mainContent clearfix">
+			<div class="mainContent clearfix text-Left">
 				<nav class="mgTop-10px paddingLR-10px"><ul companct>
-					<li class="size-3">
+					<li class="text-left size-5 pad-6">
 						<h4 class="boldFont">VIPbite</h4>
-						<p class="mgTop-5px mgBottom-10px mgLeft-5px">
+						<p class="mgTop-5px mgBottom-10px">
 							VIPbite is a restaurant discount membership program unlike any other food or beverage savings offerings.
 							Don't bother waiting for daily deal coupons or other promotions in your area, 
 							VIPbite gives you instant access to start saving today on local restaurants in your area.
 						</p>
 					</li>
-					<li class="size-3 push-2">
-						<h4 class="boldFont mgLeft-10px mgBottom-10px">Social Media</h4>
-						<div class="mgTop-10px mgLeft-20px">
+					<li class="text-left size-4 pad-5">
+						<h4 class="boldFont mgBottom-10px">Social Media</h4>
+						<div class="mgTop-14px">
 							<img src="/Image/Shared/twitter.png" width="25px" height="25px">
 							<img class="mgLeft-5px" src="/Image/Shared/facebook.png" width="25px" height="25px"/>
 							<img class="mgLeft-5px" src="/Image/Shared/instargram.png" width="25px" height="25px"/>
-							<img class="mgLeft-5px" src="/Image/Shared/pinterest.png" width="25px" height="25px"/>
+							<img class="mgLeft-5px" src="/Image/Shared/gPlus.png" alt="googleplusImg" widht="25px" height="25px"/>
 						</div>
-						<div class="mgTop-10px mgBottom-10px mgLeft-20px">
+						<div class="mgTop-10px mgBottom-10px">
 							<a href="https://twitter.com/VIPbite" class="twitter-follow-button" data-show-count="false" data-show-screen-name="false">Follow @VIPbite</a>
 							<a href="https://twitter.com/share" class="twitter-share-button" data-text="VIPbite" data-via="VIPbite">Tweet</a>
 						</div>
 					</li>
-					<li class="size-2 push-2">
+					<li class="text-left size-3 pad-7">
 						<h4 class="boldFont">Our Service</h4>
-						<ul class="mgTop-10px mgBotton-10px mgLeft-10px">
+						<ul class="mgBotton-10px">
 							<li class="sitemap"><a href="/home/AboutUs"><text class="linkFont">AboutUs</text></a></li>
 							<li class="sitemap"><a href="/home/ContactUs"><text class="linkFont">Contact Us</text></a></li>
+							<li class="sitemap"><a href="/home/ContactUs"><text class="linkFont">Add Your Restaurant</a></li>
 						</ul>
 					</li>
-					<li class="size-2 push-2">
+					<li class="text-left size-3 fRight">
 						<h4 class="boldFont">Our Policies</h4>
-						<ul class="mgTop-10px mgBotton-10px mgLeft-10px">
+						<ul class="mgBotton-10px">
 							<li class="sitemap"><a href="/contact"><text class="linkFont">FAQ</text></a></li>
 							<li class="sitemap"><a href="/contact"><text class="linkFont">Privacy Statement</text></a></li>
 							<li class="sitemap"><a href="/contact"><text class="linkFont">Term of Use</text></a></li>

@@ -33,6 +33,7 @@ class RestaurantController < ApplicationController
 			end
 
 			@Name 			= result_overview.restaurantname
+			@Address		= [result_overview.address, result_overview.city, result_overview.province, result_overview.postal].join(", ")
 			@Deal 			= result_info.promo
 			@Detail			= result_info.promoDetail
 			@Reservation	= result_info.reservation
