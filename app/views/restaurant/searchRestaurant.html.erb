@@ -3,16 +3,16 @@
 		<article class="clearfix size-7 mgBottom-20px">
 			<section>
 				<%= form_tag(controller: 'restaurant', action: 'searchRestaurant', method: "post") do %>
-					<%= text_field_tag('SearchVal', nil || params[:SearchVal], maxlength: 30, placeholder: 'Where would you like to save?', size: 40, style: "height: 23px;", :class=>"searchRestInput") %>
+					<%= text_field_tag('SearchVal', nil || params[:SearchVal], maxlength: 30, placeholder: 'Where would you like to save?', size: 30, style: "height: 23px;", :class=>"searchRestInput") %>
 					<%= submit_tag('SEARCH', :class=>"searchRestButton clickable", style: "padding:7px; font-size: 11px;")%>
 				<% end %>
 			</section>
-			<section class="mgTop-10px">
+			<section class="mgTop-10px resultBox">
 				<% if(nil != @searchRestaurant) %>
 					<% @searchRestaurant.each do |rest|%>
 						<div class="itemResult" itemscope itemtype="http://schema.org/Restaurant">
-							<div itemprop="logo" class="fLeft size-7">
-								<%= link_to image_tag('/Image/restaurant_logo/' << rest.imageUrl, style:"width:100%; height:60px;"), {controller: 'restaurant', action: 'restaurantDetail', restaurant: rest.restaurantname}, :target => "_blank" %>
+							<div itemprop="logo" class="fLeft size-7 mgTop-15px">
+								<%= link_to image_tag('/Image/restaurant_logo/' << rest.imageUrl, style:"width:100%; height:60px; align:middle"), {controller: 'restaurant', action: 'restaurantDetail', restaurant: rest.restaurantname}, :target => "_blank" %>
 							</div>
 							<div class="fLeft size-12 mgLeft-10px" onclick="showRestaurantLocation('<%=rest.restaurantname%>')">
 								<h3 class="boldFont" itemprop="name"><%= rest.restaurantname %></h3>

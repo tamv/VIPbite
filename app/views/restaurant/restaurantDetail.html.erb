@@ -30,32 +30,32 @@
 				</div>
 			</section>
 			<section id="restaurantDetail">
-				<table>
-					<tr>
-						<th>RESERVATION:</th>
-						<td style="line-height: 1.0"><%= @Reservation %></td>
-					</tr>
-					<tr>
-						<th>PHONE:</th>
-						<td style="line-height: 1.0"><%= @Phone %></td>
-					</tr>
-					<tr>
-						<th>HOURS:</th>
-						<td><%=@Hours%></td>
-					</tr>
-					<tr>
-						<th>ADDRESS:</th>
-						<td><%=@Address%></td>
-					</tr>
-					<tr>
-						<th>WHY WE LOVE <%= @Name %>:</th>
-						<td style="line-height: 15px;"><%= @Comment %></td>
-					</tr>
-					<tr>
-						<th>WEBSITE:</th>
-						<td>belgo.ca</td>
-					</tr>
-				</table>
+				<ul>
+					<li>
+						<p class="size-7 boldFont">RESERVATION:</p>
+						<p class="size-10" style="line-height: 1.0"><%= @Reservation %></p>
+					</li>
+					<li>
+						<p class="size-7 boldFont">PHONE:</p>
+						<p class="size-10" style="line-height: 1.0"><%= @Phone %></p>
+					</li>
+					<li>
+						<p class="size-7 boldFont">HOUR:</p>
+						<p class="size-10" style="line-height: 1.0"><%= @Hours %></p>
+					</li>
+					<li>
+						<p class="size-7 boldFont">ADDRESS:</p>
+						<p class="size-10" style="line-height: 1.0"><%= @Address %></p>
+					</li>
+					<li>
+						<p class="size-7 boldFont">WHY WE LOVE <%= @Name %>:</p>
+						<p class="size-10" style="line-height: 1.0"><%= @Comment %></p>
+					</li>
+					<li>
+						<p class="size-7 boldFont">WEBSITE:</p>
+						<p class="size-10" style="line-height: 1.0">TEST</p>
+					</li>
+				</ul>
 			</section>
 			<hr/>
 			<section id="urbanspoonDetail">

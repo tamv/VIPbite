@@ -3,10 +3,15 @@
 .itemResult 						{ position: relative; overflow: auto; margin-top: 5px; margin-bottom: 5px;}
 .searchRestInput 					{ }
 .searchRestButton 					{ }
-.searchMapStyle 					{ display: block; width: 100%px; min-height: 350px;}
+.searchMapStyle 					{ display: block; width: 100%px; min-height: 400px;}
 
 #restaurantDetail th				{ padding: 5px 3px; min-width: 70px; }
 #restaurantDetail td				{ padding: 5px 3px;}
+#restaurantDetail ul li				{ margin: 10px 0px;}
+#restaurantDetail ul li	p			{ display: inline-block; vertical-align: text-top;}
+
+
+.resultBox							{ max-height: 500px; overflow-x: auto;}
 
 
 @media only screen and (max-width: 480px) {
