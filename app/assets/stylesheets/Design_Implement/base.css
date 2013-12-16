@@ -16,6 +16,7 @@ strong { font-weight:bold; }
 em { font-style:italic; }
 a img { border:none; } /* Gets rid of IE's blue borders */
 blockquote { text-indent: 0; }
+p {word-wrap: break-word;}
 
 /* GLOBAL CSS SETTING */
 html { position: relative; }
@@ -86,4 +87,4 @@ caption     { background: #eee; }
 .alignCenter { text-align: center; vertical-align: middle; }
 .clearBoth { clear: both; }
 .autoOverFlow { overflow: auto; }
-.highlight {background-color: yellow; border: 2px solid black; }
+.highlight { background-color: yellow; border: 2px solid black; }

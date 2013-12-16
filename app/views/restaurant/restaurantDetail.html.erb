@@ -8,7 +8,7 @@
 				<h6><i><%= @Tags %></i></h6>
 				<br/>
 				<span class="RestaurantImageView">
-					<ul class="imglist">
+					<ul class="imgList">
 						<% @Images.each do |img| %>
 							<li class="imgthumbnail"><a href="<%= img %>" data-lightbox="restaurantImg"/><img src="<%= img %>" width="40px" height="40px"/></a></li>
 						<% end %>
@@ -53,13 +53,14 @@
 					</li>
 					<li>
 						<p class="size-7 boldFont">WEBSITE:</p>
-						<p class="size-10" style="line-height: 1.0">TEST</p>
+						<p class="size-10" style="line-height: 1.0"><%= @RestaurantLink %></p>
 					</li>
 				</ul>
 			</section>
 			<hr/>
 			<section id="urbanspoonDetail">
 				<a href="http://www.<%= @urbanspoonlink%>" target="_blank"><img src="/Image/Shared/urbanspoon.png" style="img-align:center"/></a>
+				<p><%=@urbanspoonreview %></p>
 			</section>
 			<hr/>
 		</article>

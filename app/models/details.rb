@@ -1,6 +1,5 @@
 class Details < ActiveRecord::Base
-	attr_accessible :detailId, :promo, :promoDetail, :reservation, :detaillink,
-	:comment, :imgFolder, :urbanspoon
+	attr_accessible :detailId, :promo, :promoDetail, :reservation, :operatinghour, :detaillink, :comment, :imgFolder, :urbanspoon, :urbanspoonreview
 
 	def self.AddDetail(params)
 		remove = Details.find_by(detailId: params[:Id])
@@ -11,10 +10,12 @@ class Details < ActiveRecord::Base
 			:promo			=> params[:promo_Name],
 			:promoDetail	=> params[:detail],
 			:reservation	=> params[:reservation],
-			:detaillink		=> params[:restaurantLink],
+			:operatinghour	=> params[:storehour],
+			:restaurantlink	=> params[:restaurantLink],
 			:comment		=> params[:extracomment],
 			:imgFolder		=> params[:imagesFolder],
-			:urbanspoon		=> params[:urbanspoonlink]
+			:urbanspoon		=> params[:urbanspoonlink],
+			:urbanspoonreview => params[:reviewpercentage],
 			)
 	end
 end

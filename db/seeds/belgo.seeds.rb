@@ -19,8 +19,10 @@ Details.AddDetail(
 		:promo_Name			=> 'Promotion Name',
 		:detail				=> 'Promotion Detail',
 		:reservation		=> 'http://www.belgo.ca/webpage/1003100/1000485',
+		:storehour			=> 'M, W, F @ 10am-5pm',
 		:restaurantLink		=> 'http://www.belgo.ca/page/reservations/1000485',
 		:extracomment		=> 'extra suggestion place here',
 		:imagesFolder		=> 'belgoimgs',
-		:urbanspoonlink		=> 'urbanspoon.com'
+		:urbanspoonlink		=> 'urbanspoon.com',
+		:reviewpercentage	=> '17%'
 	)

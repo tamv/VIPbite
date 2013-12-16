@@ -5,10 +5,12 @@ class MigrateDetails < ActiveRecord::Migration
   		t.text :promo
   		t.text :promoDetail
   		t.string :reservation
-  		t.string :detaillink
+      t.string :operatinghour
+  		t.string :restaurantlink
   		t.text :comment
   		t.string :imgFolder
   		t.string :urbanspoon
+      t.string :urbanspoonreview
   		t.timestamp
   	end
   end

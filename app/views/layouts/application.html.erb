@@ -28,38 +28,40 @@
 	<header>
 		<div id="staticHeader">
 			<div id="loginContainer"class="mainContent clearfix">
-				<nav><ul compact>
 					<% if(checkUserCookies) %>
-						<li>
-							<section>
-								<a href="/account/user" class="loginLink"><%= @current_user.login %></a>
-								<a href="/session/logout" class="loginLink">Logout</a>
-							</section>
-						</li>
+						<nav id="cssmenu"><ul compact>
+							<li><a><%= @current_user.login %></a>
+								<ul>
+									<li><a href="/account/user" class="loginLink">My Account</a></li>
+									<li><a href="/session/logout" class="loginLink">Logout</a></li>
+								</ul>
+							</li>
+						</ul></nav>
 					<%else%>
-						<li class="block">
-							<%= form_tag( controller: 'session', action: 'LogIn', method: 'post') do %>
-								<table>
-									<tr>
-										<th><label class="loginLabel inlineBlock">Email </th>
-										<th><label class="loginLabel inlineBlock">Password </th>
-									</tr>
-									<tr>
-										<td><%= email_field_tag('email', nil, maxlength: 30,:class=>"loginInput inlineBlock text-left") %></td>
-										<td><%= password_field_tag('password', nil, maxlength:20, :class=>"loginInput inlineBlock text-left") %></td>
-										<td><%= submit_tag('Login', :class=>"loginButton inlineBlock clickable")%></td>
-									</tr>
-									<tr>
-										<td><p class="loginLink">checkbox+Keep me logged in</p></td>
-										<td><a href="/account/PasswordRecovery" class="loginLink">Forgot Your Password?</a></td>
-									</tr>
-								</table>
-							<%end%>
-						</li>
-						<li class="block">
-						</li>
+						<nav><ul compact>
+							<li class="block">
+								<%= form_tag( controller: 'session', action: 'LogIn', method: 'post') do %>
+									<table>
+										<tr>
+											<th><label class="loginLabel inlineBlock">Email </th>
+											<th><label class="loginLabel inlineBlock">Password </th>
+										</tr>
+										<tr>
+											<td><%= email_field_tag('email', nil, maxlength: 30,:class=>"loginInput inlineBlock text-left") %></td>
+											<td><%= password_field_tag('password', nil, maxlength:20, :class=>"loginInput inlineBlock text-left") %></td>
+											<td><%= submit_tag('Login', :class=>"loginButton inlineBlock clickable")%></td>
+										</tr>
+										<tr>
+											<td><%= check_box_tag('remme', false, nil, :class=>"inlineBlock mgRight-10px") %><p class="loginLink" style="display:inline;">Keep me logged in</p></td>
+											<td><a href="/account/PasswordRecovery" class="loginLink">Forgot Your Password?</a></td>
+										</tr>
+									</table>
+								<%end%>
+							</li>
+							<li class="block">
+							</li>
+						</ul></nav>
 					<%end%>
-				</ul></nav>
 			</div>
 		</div>
 		<div id="menuHeader">

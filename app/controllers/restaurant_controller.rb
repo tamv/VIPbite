@@ -38,9 +38,11 @@ class RestaurantController < ApplicationController
 			@Detail			= result_info.promoDetail
 			@Reservation	= result_info.reservation
 			@Phone			= result_overview.phone
-			@Hours 			= result_info.detaillink
+			@Hours 			= result_info.operatinghour
 			@Comment 		= result_info.comment
 			@urbanspoonlink = result_info.urbanspoon
+			@urbanspoonreview = result_info.urbanspoonreview
+			@RestaurantLink = result_info.restaurantlink
 			@Tags			= result_overview.tags
 
 			@Latitude		= result_overview.latitude

@@ -21,10 +21,12 @@ ActiveRecord::Schema.define(version: 3) do
     t.text   "promo"
     t.text   "promoDetail"
     t.string "reservation"
-    t.string "detaillink"
+    t.string "operatinghour"
+    t.string "restaurantlink"
     t.text   "comment"
     t.string "imgFolder"
     t.string "urbanspoon"
+    t.string "urbanspoonreview"
   end
 
   create_table "restaurants", force: true do |t|
