@@ -1,0 +1,104 @@
+<div class="navigation">
+	<a class="select" href="/">
+		<img src="/Image/mobile/nav/item1ns.png" alt="img"><em class="under-icon-text">Home</em>
+	</a>
+	<a href="/mobile/search">
+		<img src="/Image/mobile/nav/item2ns.png" alt="img"><em class="under-icon-text">Search</em>
+	</a>
+	<a href="/mobile/map">
+		<img src="/Image/mobile/nav/item3ns.png" alt="img"><em class="under-icon-text">Map</em>
+	</a>
+	<a href="/mobile/login">
+		<img src="/Image/mobile/nav/item5ns.png" alt="img"><em class="under-icon-text">My Account</em>
+	</a>
+</div>
+
+<div class="header">
+	<img class="logo" src="images/logo.png" alt="img"> 
+</div>
+
+<div class="subHeader">
+	<h1>Search</h1>
+	<form id="VIPBITE_SearchForm" class="login-form" onsubmit = "VIPBiteAPI.searchRequest">
+		<input id="VIPBITE_SearchInput" name="search" type="text" class="input search" placeholder="Restaurant Name" />
+	</form>
+</div>
+
+ <div id="VIPBITE_SearchResultList" class="listContainer">
+	<dl>
+		<dt>A</dt>
+		<dd><a href="#">Andrew W.K.</a></dd>
+		<dd><a href="#">Apparat</a></dd>
+		<dd><a href="#">Arcade Fire</a></dd>
+		<dd><a href="#">At The Drive-In</a></dd>
+		<dd><a href="#">Aziz Ansari</a></dd>
+	</dl>
+	<dl>
+		<dt>B</dt>
+		<dd><a href="#">Battles</a></dd>
+		<dd><a href="#">Biz Markie</a></dd>
+		<dd><a href="#">The Black Keys</a></dd>
+		<dd><a href="#">Blakroc</a></dd>
+		<dd><a href="#">Broken Social Scene</a></dd>
+	</dl>
+	<dl>
+		<dt>C</dt>
+		<dd><a href="#">Chromeo</a></dd>
+		<dd><a href="#">Common</a></dd>
+		<dd><a href="#">Converge</a></dd>
+		<dd><a href="#">Crystal Castles</a></dd>
+		<dd><a href="#">Cursive</a></dd>
+	</dl>
+	<dl>
+		<dt>D</dt>
+		<dd><a href="#">Daft Punk</a></dd>
+		<dd><a href="#">David Bazan</a></dd>
+		<dd><a href="#">Death from Above 1979</a></dd>
+		<dd><a href="#">Delorean</a></dd>
+	</dl>
+	<dl>
+		<dt>E</dt>
+		<dd><a href="#">Explosions In The Sky</a></dd>
+	</dl>
+	<dl>
+		<dt>F</dt>
+		<dd><a href="#">Fear Before The March Of Flames</a></dd>
+		<dd><a href="#">The Fire Theft</a></dd>
+		<dd><a href="#">Flight of the Conchords</a></dd>
+		<dd><a href="#">Foo Fighters</a></dd>
+	</dl>
+	<dl>
+		<dt>G</dt>
+		<dd><a href="#">The Get Up Kids</a></dd>
+		<dd><a href="#">Girl Talk</a></dd>
+		<dd><a href="#">godspeed you! black emperor</a></dd>
+		<dd><a href="#">Guns N' Roses</a></dd>
+	</dl>
+	<dl>
+		<dt>H</dt>
+		<dd><a href="#">Haddaway</a></dd>
+		<dd><a href="#">Hot Chip</a></dd>
+		<dd><a href="#">Hot Hot Heat</a></dd>
+	</dl>
+	<dl>
+		<dt>I</dt>
+		<dd><a href="#">Immaculate Machine</a></dd>
+		<dd><a href="#">Imogen Heap</a></dd>
+		<dd><a href="#">Interpol</a></dd>
+	</dl>
+	<dl>
+		<dt>J</dt>
+		<dd><a href="#">James Blake</a></dd>
+		<dd><a href="#">Japandroids</a></dd>
+		<dd><a href="#">Jimmy Eat World</a></dd>
+		<dd><a href="#">The Juan MacLean</a></dd>
+	</dl>
+	</div>
+
+	<script>
+		$(function(){
+			$("#VIPBITE_SearchResultList").ioslist();
+		});
+	</script>
+
+<div class="empty-clear-menu"></div>

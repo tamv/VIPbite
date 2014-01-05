@@ -5,4 +5,18 @@ class ApplicationController < ActionController::Base
 
   include SessionHelper
   include RestaurantHelper
+
+  before_filter :checkForMobile
+
+  private
+
+  def isMobileDevice?
+  	request.user_agent =~ /Mobile|webOS/
+  end
+
+  helper_method :isMobileDevice?
+
+  def checkForMobile
+  	request.format = :mobile if isMobileDevice?
+  end
 end

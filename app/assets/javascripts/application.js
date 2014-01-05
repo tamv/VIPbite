@@ -11,3 +11,4 @@
 // about supported directives.
 //
 //= require jquery
+//= require_tree ./Design_Implement/web

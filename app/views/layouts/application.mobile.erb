@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+		<link rel="apple-touch-icon" sizes="114x114" href="/Image/mobile/icontwo.png">
+		<link rel="apple-touch-startup-image" href="/Image/mobile/startup.png" />
+
+		<%= stylesheet_link_tag 'mobile'%>
+		<%= javascript_include_tag 'mobile'%>
+
+		<!-- Do not move the bellow script to custom.js! It must stay here to load properly! -->
+		<script type="text/javascript">
+			function loadImages() {
+				if (document.getElementById) {  // DOM3 = IE5, NS6
+					document.getElementById('hidepage').style.visibility = 'hidden';
+				}else {
+				if (document.layers) {  // Netscape 4
+					document.hidepage.visibility = 'hidden';
+				}else {  // IE 4
+					document.all.hidepage.style.visibility = 'hidden';
+				  }
+			   }
+			}
+		</script>
+	</head>
+
+	<body OnLoad="loadImages()">
+		<div class="site">
+			<div id="hidepage"> 
+				<p class="center-text">
+					Loading depends on mobile bandwidth speed!<br/>
+					<img src="/Image/mobile/background/130.gif" alt="load">
+				</p>	
+			</div>
+		</div>
+
+		<div class="header">
+			<img class="logo" src="/Image/mobile/logo.png" alt="img"> 
+		</div>
+		
+		<%= yield %>
+	</body>
+</html>
