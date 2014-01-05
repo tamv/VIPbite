@@ -1,5 +1,6 @@
 function initialize_withLoc()
 {
+	alert("TEST");
 	var featureOpts = [{
 		stylers: [
         { visibility: 'simplified' }, ] },
