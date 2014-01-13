@@ -23,4 +23,5 @@ VIPbite::Application.routes.draw do
 	match '/mobile/search', 	:to =>	'mobile#search', 	via:[:get, :post]
 	match '/mobile/map',		:to	=>	'mobile#map', 		via:[:get, :post]
 	match '/mobile/register', 	:to =>	'mobile#register',	via:[:get, :post]
+	match '/mobile/user',		:to =>	'mobile#user',		via:[:get, :post]
 end

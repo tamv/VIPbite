@@ -6,6 +6,9 @@ class ApplicationController < ActionController::Base
   include SessionHelper
   include RestaurantHelper
 
+  #include  WebHelper
+  include  MobileHelper
+
   before_filter :checkForMobile
 
   private

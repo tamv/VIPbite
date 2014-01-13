@@ -1,0 +1,49 @@
+<div class="navigation">
+		<a href="/"><img src="/Image/mobile/nav/item1ns.png" alt="img"><em class="under-icon-text">Home</em></a>
+		<a href="/mobile/search"><img src="/Image/mobile/nav/item2ns.png" alt="img"><em class="under-icon-text">Search</em></a>
+		<a href="/mobile/map"><img src="/Image/mobile/nav/item3ns.png" alt="img"><em class="under-icon-text">Map</em></a>
+		<a class="selected" href="/mobile/user"><img src="/Image/mobile/nav/item5ns.png" alt="img"><em class="under-icon-text">My Account</em></a>
+</div>
+
+<div class="contentWrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="/Image/mobile/slider/1.jpg"/></li>
+						<li><img src="/Image/mobile/slider/2.jpg"/></li>
+						<li><img src="/Image/mobile/slider/3.jpg"/></li>
+						<li><img src="/Image/mobile/slider/4.jpg"/></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="tagline">
+					<h2>Welcome <br/><%= @loginUser.firstName %> <%= @loginUser.lastName %>!</h2>
+					<% if(@loginUser.expDate >= Time.now) %>
+						<p>
+							Your account is valid until <br/>
+							<span><%= @loginUser.expDate.strftime("%B %d, %Y.") %></span><br/>
+							Start saving on dining with VIPbite!
+						</p>
+						<br/>
+						<img src="/Image/mobile/check-box.png" alt="Active Icon" />
+					<% else %>
+						<p>
+							Unfortunately, your VIPBite accout expire on <br/>
+							<span class="redTxt"><%= @loginUser.expDate.strftime("%B %d, %Y.") %></span>
+						</p>
+						<br/>
+						<img src="/Image/mobile/red-x.png" alt="Expired Icon" />
+						<br/>
+						<a href="/mobile/register" class="button buttonLG">Renew Your Subscription</a>
+					<% end %>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
