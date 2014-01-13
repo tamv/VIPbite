@@ -19,7 +19,8 @@ VIPbite::Application.routes.draw do
 	match '/restaurant/restaurantDetail', :to => 'restaurant#restaurantDetail', via:[:get, :post]
 
 	# mobilesite route table except index.html it will always be the same!
-	match '/mobile/login', 	:to =>	'mobile#login', 	via:[:get, :post]
-	match '/mobile/search', :to =>	'mobile#search', 	via:[:get, :post]
-	match '/mobile/map',	:to	=>	'mobile#map', 		via:[:get, :post]
+	match '/mobile/login', 		:to =>	'mobile#login', 	via:[:get, :post]
+	match '/mobile/search', 	:to =>	'mobile#search', 	via:[:get, :post]
+	match '/mobile/map',		:to	=>	'mobile#map', 		via:[:get, :post]
+	match '/mobile/register', 	:to =>	'mobile#register',	via:[:get, :post]
 end

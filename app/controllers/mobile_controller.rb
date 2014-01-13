@@ -13,4 +13,9 @@ class MobileController < ApplicationController
 	#Function_Description:
 	def map
 	end
+
+	#Function_Name:
+	#Function_Description:
+	def register
+	end
 end

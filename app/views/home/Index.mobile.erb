@@ -1,52 +1,50 @@
 <div class="navigation">
-	<a class="select" href="/">
-		<img src="/Image/mobile/nav/item1ns.png" alt="img"><em class="under-icon-text">Home</em>
-	</a>
-	<a href="/mobile/search">
-		<img src="/Image/mobile/nav/item2ns.png" alt="img"><em class="under-icon-text">Search</em>
-	</a>
-	<a href="/mobile/map">
-		<img src="/Image/mobile/nav/item3ns.png" alt="img"><em class="under-icon-text">Map</em>
-	</a>
-	<a href="/mobile/login">
-		<img src="/Image/mobile/nav/item5ns.png" alt="img"><em class="under-icon-text">My Account</em>
-	</a>
+		<a class="selected" href="/"><img src="/Image/mobile/nav/item1ns.png" alt="img"><em class="under-icon-text">Home</em></a>
+		<a href="/mobile/search"><img src="/Image/mobile/nav/item2ns.png" alt="img"><em class="under-icon-text">Search</em></a>
+		<a href="/mobile/map"><img src="/Image/mobile/nav/item3ns.png" alt="img"><em class="under-icon-text">Map</em></a>
+		<a href="/mobile/login"><img src="/Image/mobile/nav/item5ns.png" alt="img"><em class="under-icon-text">My Account</em></a>
 </div>
 
-<div class="home">
-	<div class="flexslider">
-		<ul class="slides">
-			<li><img src="/Image/mobile/slider/1.jpg" /></li>
-			<li><img src="/Image/mobile/slider/2.jpg" /></li>
-			<li><img src="/Image/mobile/slider/3.jpg" /></li>
-			<li><img src="/Image/mobile/slider/4.jpg" /></li>
-		</ul>
-	</div>
-
-	<br />
-	
-	<div class="tagline">
-		<h1>How it works!</h1>
-		<ol>
-			<li>Eat at one of many VIPbite partner restaurants</li>
-			<li>Book your table & save big by being a VIPbite member</li>
-			<li>Enjoy your meal, show your VIPbite app, get your discount!</li>
-		</ol>
-	</div>
-
-	<div class="contentArea">
-		<ul id="gallery" class="gallery">
-			<li><a href="/Image/mobile/swype/full/001.jpg">
-				<img src="/Image/mobile/swype/thumb/001.jpg" alt="Caption Title One" />
-			</a></li>
-			<li><a href="/Image/mobile/swype/full/002.jpg">
-				<img src="/Image/mobile/swype/thumb/002.jpg" alt="Caption Title Two" />
-			</a></li>
-			<li><a href="/Image/mobile/swype/full/003.jpg">
-				<img src="/Image/mobile/swype/thumb/003.jpg" alt="Caption Title Three" />
-			</a></li>
-		</ul>
+<div class="contentWrap">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="flexslider">
+					<ul class="slides">
+						<li><img src="/Image/mobile/slider/1.jpg"/></li>
+						<li><img src="/Image/mobile/slider/2.jpg"/></li>
+						<li><img src="/Image/mobile/slider/3.jpg"/></li>
+						<li><img src="/Image/mobile/slider/4.jpg"/></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="tagline">
+					<h2>How it works!</h2>
+					 <ol>
+						<li>Eat at one of many VIPbite partner restaurants</li>
+						<li>Book your table & save big by being a VIPbite member</li>
+						<li>Enjoy your meal, show your VIPbite app, get your discount!</li>
+					</ol>
+				 </div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12">
+				<%= form_tag( {controller: 'mobile', action: 'login', method: 'post'}, :class=>"login-form") do %>
+					<div class="loginHead"><h1>Please Login</h1></div>
+					<div class="loginInputs">
+						<%= email_field_tag('username', nil, placeholder: "Username", :class=>"input username") %>
+						<div class="user-icon"></div>
+						<%= password_field_tag('password', nil, placeholder: "Password", :class=>"input password") %>
+						<div class="pass-icon"></div>
+						<%= submit_tag('Login', :class=>"button")%>
+						<a href="/mobile/register" class="register">Become a VIP Bite member!</a>
+					</div>
+				<% end %>
+			</div>
+		</div>
 	</div>
 </div>
-
-<div class="empty-clear-menu"></div>

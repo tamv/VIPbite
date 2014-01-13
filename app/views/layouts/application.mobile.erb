@@ -1,47 +1,37 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="apple-mobile-web-app-capable" content="yes" />
-		<meta name="apple-mobile-web-app-status-bar-style" content="black" />
-		<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+		<title>VIP Bite - Home</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript" src="//use.typekit.net/zrr2vfn.js"></script>
+		<script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
-		<link rel="apple-touch-icon" sizes="114x114" href="/Image/mobile/icontwo.png">
-		<link rel="apple-touch-startup-image" href="/Image/mobile/startup.png" />
+		<!-- Section used for protection-->
+		<%= csrf_meta_tags %>
 
-		<%= stylesheet_link_tag 'mobile'%>
-		<%= javascript_include_tag 'mobile'%>
 
-		<!-- Do not move the bellow script to custom.js! It must stay here to load properly! -->
-		<script type="text/javascript">
-			function loadImages() {
-				if (document.getElementById) {  // DOM3 = IE5, NS6
-					document.getElementById('hidepage').style.visibility = 'hidden';
-				}else {
-				if (document.layers) {  // Netscape 4
-					document.hidepage.visibility = 'hidden';
-				}else {  // IE 4
-					document.all.hidepage.style.visibility = 'hidden';
-				  }
-			   }
-			}
-		</script>
+		<%= stylesheet_link_tag '/css/bootstrap.min' %>
+		<%= stylesheet_link_tag '/css/style' %>
+		<%= stylesheet_link_tag '/css/buttons' %>
+		<%= stylesheet_link_tag '/css/type' %>
+		<%= stylesheet_link_tag '/css/add2home' %>
+		<%= stylesheet_link_tag '/css/flexslider' %>
+		<%= stylesheet_link_tag '/css/photoswipe' %>
+
+		<%= javascript_include_tag '/scripts/jquery.js' %>
+		<%= javascript_include_tag '/scripts/jquery.flexslider-min.js' %>
+		<%= javascript_include_tag '/scripts/custom.js' %>
+		<%= javascript_include_tag '/scripts/bootstrap.min.js' %>
 	</head>
 
-	<body OnLoad="loadImages()">
-		<div class="site">
-			<div id="hidepage"> 
-				<p class="center-text">
-					Loading depends on mobile bandwidth speed!<br/>
-					<img src="/Image/mobile/background/130.gif" alt="load">
-				</p>	
+	<body>
+		<div class="header">
+			<div class="container">
+				<div class="row">
+					<div class="col-sm-12"><img class="logo" src="/Image/mobile/logo.png" alt="img"></div>
+				</div>
 			</div>
 		</div>
-
-		<div class="header">
-			<img class="logo" src="/Image/mobile/logo.png" alt="img"> 
-		</div>
-		
 		<%= yield %>
 	</body>
 </html>
